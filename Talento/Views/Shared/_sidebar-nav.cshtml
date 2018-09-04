@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="index">
+                    <i class="nav-icon icon-chart"></i> Dashboard
+                    <span class="badge badge-primary">Nuevo</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                    <i class="nav-icon icon-folder-alt"></i>Cursos y Certificaciones
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                    <i class="nav-icon icon-book-open"></i> Ebooks y Guías
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                    <i class="nav-icon icon-calendar"></i> Eventos
+                </a>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-menu"></i> Directorios
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                            Afiliados
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                            Proveedores
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                    <i class="nav-icon fa fa-whatsapp"> </i>  Grupos de WhatsApp
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                    <i class="nav-icon icon-social-facebook"></i>Difusión en Facebook
+                </a>
+            </li>
+
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon icon-menu"></i> Empleo
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="buttons-buttons">
+                            Bolsa de Empleos TV
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="buttons-button-group">
+                            Ferias del Empleo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="buttons-dropdowns">
+                            Base de Candidatos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="buttons-brand-buttons">
+                            Juntas de Intercambio
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="charts">
+                    <i class="nav-icon icon-envelope-letter"></i>Mensajes Masivos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="icons-flags">
+                    <i class="nav-icon icon-question"></i> Encuestas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="icons-font-awesome">
+                    <i class="nav-icon icon-people"></i>Consultores
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="icons-simple-line-icons">
+                    <i class="nav-icon icon-note"></i> Blog
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="icons-simple-line-icons">
+                    <i class="nav-icon icon-like"></i>Recomiendanos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="icons-simple-line-icons">
+                    <i class="nav-icon icon-wallet"></i>Productos con tarifas preferentes
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+}
