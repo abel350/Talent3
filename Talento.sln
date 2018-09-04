@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talento", "Talento\Talento.csproj", "{BAB495D6-5019-485E-869C-4328E827AA92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAB495D6-5019-485E-869C-4328E827AA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB495D6-5019-485E-869C-4328E827AA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB495D6-5019-485E-869C-4328E827AA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB495D6-5019-485E-869C-4328E827AA92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF59B9B1-57E9-4C36-A7AA-0166B02263B9}
+	EndGlobalSection
+EndGlobal
