@@ -4,15 +4,31 @@
 
 @section Styles {
   <style>
-    .carousel-caption p {
+    
+      .carousel-caption p {
       font-size: 20px;
       line-height: 1.4;
     }
+      .container-fluid > .animated {
+          margin-top: 5px !important;
+       }
 
     h1, .h1, h2, .h2, h3, .h3 {
       margin-top: 20px;
       margin-bottom: 10px;
     }
+      .cuadro-amarillo {
+          background-color: #f0db4f;
+          width: 100%;
+          text-decoration: none;
+          height: 100%;
+      }
+      .cuadro-amarillo h1, h4 {
+          color:#000;
+          }
+      .col-md-4 ul li{
+          list-style: none;
+      }
   </style>
 }
 
@@ -25,7 +41,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+      <img src="~/images/Recurso_2.png" alt="ASP.NET" class="img-responsive" />
       <div class="carousel-caption" role="option">
         <p>
           Learn how to build ASP.NET apps that can run anywhere.
@@ -36,33 +52,11 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
+      <img src="~/images/Recurso_2.png" alt="Visual Studio" class="img-responsive" />
       <div class="carousel-caption" role="option">
         <p>
           There are powerful new features in Visual Studio for building modern web apps.
           <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-            Learn More
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-      <div class="carousel-caption" role="option">
-        <p>
-          Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-          <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-            Learn More
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-      <div class="carousel-caption" role="option">
-        <p>
-          Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-          <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
             Learn More
           </a>
         </p>
@@ -93,12 +87,14 @@
   </div>
 
   <div class="col-md-4 text-center">
-    <h2>REGLAS DEL JUEGO</h2>
-    <ul>
-      <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Aviso de Privacidad</a></li>
-      <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Contacto</a></li>
-      <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">5215562546850</a></li>
-      <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">dunia@networkingtalento.net</a></li>
-    </ul>
+      <div class="cuadro-amarillo ">
+          <a href="#"><h1 style="padding-top:30px;">REGLAS DEL JUEGO</h1></a>
+          <ul style="padding-top:20px;">
+              <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851"><h4>Aviso de Privacidad</h4></a></li>
+              <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853"><h4>Contacto</h4></a></li>
+              <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609"><h4>5215562546850</h4></a></li>
+              <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609"><h4>dunia@networkingtalento.net</h4></a></li>
+          </ul>
+      </div>
   </div>
 </div>
