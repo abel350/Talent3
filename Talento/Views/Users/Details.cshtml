@@ -1,0 +1,91 @@
+﻿@model Talento.Models.Users
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Membresia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Membresia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Apaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GiroEmpresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GiroEmpresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Puesto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Puesto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMembresia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoMembresia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaIngreso)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdUsuario">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

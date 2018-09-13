@@ -27,12 +27,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                <a class="nav-link" asp-area="" asp-controller="Talent" asp-action="Index" asp-route-view="EbooksYGuias">
                     <i class="nav-icon icon-book-open"></i> Ebooks y Guías
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                <a class="nav-link" asp-area="" asp-controller="Talent" asp-action="Index" asp-route-view="Eventos">
                     <i class="nav-icon icon-calendar"></i> Eventos
                 </a>
             </li>
@@ -42,19 +42,19 @@
                 </a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                        <a class="nav-link" asp-area="" asp-controller="Talent" asp-action="Index" asp-route-view="Afiliados">
                             Afiliados
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                        <a class="nav-link" asp-area="" asp-controller="Talent" asp-action="Index" asp-route-view="DirProv">
                             Proveedores
                         </a>
                     </li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="#">
+                <a class="nav-link" asp-area="" asp-controller="Talent" asp-action="Index" asp-route-view="GruposWhats">
                     <i class="nav-icon fa fa-whatsapp"> </i>  Grupos de WhatsApp
                 </a>
             </li>
@@ -130,14 +130,12 @@ else
     <nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="index">
+                <a class="nav-link" asp-area="" asp-controller="" asp-action="" asp-route-view="">
                     Debes de identificarte para poder ver el menú del sistema.
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="index">
-                    Da clic en Acceso e ingresa tu correo y contraseña<br/> ----->
-                </a>
+            <li class="nav-item">                
+                <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Acceder ahora</a>
             </li>
         </ul>
     </nav>

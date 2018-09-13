@@ -369,6 +369,9 @@ progress {
 .icono_menu{
     color: #fff;
 }
+
+
+
 /*----------------- FIN INDEX ----------------------*/
 output {
     display: inline-block;
@@ -2295,8 +2298,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     display: flex;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    /*-ms-flex-flow: row wrap;
+    flex-flow: row wrap;*/
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0;
@@ -4370,7 +4373,7 @@ input[type="button"].btn-block {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-width: 0;
+  width:100%;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -4496,8 +4499,8 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-deck {
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    /*-ms-flex-flow: row wrap;
+    flex-flow: row wrap;*/
     margin-right: -15px;
     margin-left: -15px;
   }
@@ -4526,10 +4529,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 576px) {
-  .card-group {
+  /*.card-group {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-  }
+  }*/
   .card-group > .card {
     -ms-flex: 1 0 0%;
     flex: 1 0 0%;
@@ -7657,7 +7660,7 @@ button.bg-dark:focus {
 }
 
 .p-4 {
-  padding: 1.5rem !important;
+  padding: 3rem !important;
 }
 
 .pt-4,
@@ -12611,8 +12614,8 @@ app-root {
 }
 
 .app-footer {
-  -ms-flex: 0 0 50px;
-  flex: 0 0 50px;
+  -ms-flex: 0 0 35px;
+  flex: 0 0 35px;
 }
 
 .app-body {

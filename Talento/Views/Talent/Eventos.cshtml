@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "Eventos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .sidebar .nav-link.active {
+        color: #fff;
+        background: #DE1679;
+    }
+
+    .main .container-fluid {
+        padding: 0;
+    }
+
+
+    #youtube {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    input {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .col-sm-6 {
+        padding:0;
+    }
+</style>
+
+
+<div class="row">
+    <div style="width:100%; height:auto; background-color:#DE1679;color: white;">
+        <h1 style="padding:25px 20px 20px 100px;"><b>EbooksYGuias</b></h1>
+
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div id="youtube" class="img-thumbnail">
+            <div class="col-sm-6">
+                <div id="ytplayer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-5 ">
+            <input type="button" class="btn btn-facebook" name="btnYOUTUBE" value="REGISTRO DE EMPRESAS" />
+
+    </div>
+    
+</div>
+
+
+
+<script>
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+            height: '480',
+            width: '720',
+            videoId: 'M7lc1UVf-VE'
+        });
+    }
+</script>

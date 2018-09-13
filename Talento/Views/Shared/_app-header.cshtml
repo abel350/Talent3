@@ -4,14 +4,14 @@
 @inject UserManager<IdentityUser> UserManager
 
 <header class="app-header navbar">
-  @*<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
     <span class="icono_menu"><i class="fa fa-bars"></i></span>
   </button>
-  <a class="navbar-brand" href="#">
+  @*<a class="navbar-brand" href="#">
     <img class="navbar-brand-full" src="~/images/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
     <img class="navbar-brand-minimized" src="~/images/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
-  </a>
-  <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+  </a>*@
+  @*<button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
       <span class="icono_menu"><i class="fa fa-bars"></i></span>
   </button>*@
     <div style="width:250px;"></div>
@@ -21,7 +21,7 @@
 
   @if (SignInManager.IsSignedIn(User))
   {
-  <ul class="nav navbar-nav ml-auto">
+  <ul class="nav navbar-nav ml-auto" style="padding-right:50px;">
     <!--<li class="nav-item d-md-down-none">
       <a class="nav-link" href="#">
         <i class="icon-bell"></i>
@@ -52,9 +52,9 @@
   }
   else
   {
-    <ul class="nav navbar-nav ml-auto">
+    <ul class="nav navbar-nav ml-auto" style="padding-right:50px;">
       <li class="nav-item px-3">
-        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Registrar</a>
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Registrarse</a>
       </li>
       <li class="nav-item px-3">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Acceso</a>

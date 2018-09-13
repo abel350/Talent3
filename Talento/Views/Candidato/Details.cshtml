@@ -1,0 +1,127 @@
+﻿@model Talento.Models.CandidatoViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CandidatoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Apaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amaterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amaterno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeNacimineto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeNacimineto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pais)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoPostal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodigoPostal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Escolaridad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Escolaridad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UltimoPuesto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UltimoPuesto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SueldoDeseado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SueldoDeseado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comentarios)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comentarios)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvisoPrivacidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvisoPrivacidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdCandidato">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
