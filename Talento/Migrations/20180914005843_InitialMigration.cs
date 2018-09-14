@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Talento.Data.Migrations
+namespace Talento.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,60 @@ namespace Talento.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CandidatoViewModel",
+                columns: table => new
+                {
+                    IdCandidato = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Apaterno = table.Column<string>(maxLength: 50, nullable: false),
+                    Amaterno = table.Column<string>(maxLength: 50, nullable: false),
+                    Nombre = table.Column<string>(maxLength: 50, nullable: false),
+                    Edad = table.Column<int>(maxLength: 2, nullable: false),
+                    FechaDeNacimineto = table.Column<DateTime>(nullable: false),
+                    Pais = table.Column<string>(maxLength: 50, nullable: false),
+                    Estado = table.Column<string>(maxLength: 50, nullable: false),
+                    Ciudad = table.Column<string>(maxLength: 50, nullable: false),
+                    CodigoPostal = table.Column<int>(nullable: false),
+                    Correo = table.Column<string>(maxLength: 50, nullable: false),
+                    Telefono = table.Column<int>(maxLength: 10, nullable: false),
+                    Celular = table.Column<int>(maxLength: 10, nullable: false),
+                    Escolaridad = table.Column<string>(maxLength: 100, nullable: true),
+                    UltimoPuesto = table.Column<string>(maxLength: 100, nullable: true),
+                    SueldoDeseado = table.Column<int>(nullable: false),
+                    Comentarios = table.Column<string>(maxLength: 255, nullable: true),
+                    AvisoPrivacidad = table.Column<bool>(nullable: false),
+                    FechaRegistro = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CandidatoViewModel", x => x.IdCandidato);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    IdUsuario = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Membresia = table.Column<string>(nullable: true),
+                    Apaterno = table.Column<string>(maxLength: 50, nullable: false),
+                    Amaterno = table.Column<string>(maxLength: 50, nullable: false),
+                    Nombre = table.Column<string>(maxLength: 50, nullable: false),
+                    Empresa = table.Column<string>(maxLength: 255, nullable: false),
+                    GiroEmpresa = table.Column<string>(maxLength: 255, nullable: false),
+                    Puesto = table.Column<string>(maxLength: 250, nullable: false),
+                    Telefono = table.Column<int>(maxLength: 10, nullable: false),
+                    Correo = table.Column<string>(maxLength: 50, nullable: false),
+                    Ciudad = table.Column<string>(maxLength: 50, nullable: false),
+                    TipoMembresia = table.Column<string>(maxLength: 10, nullable: false),
+                    FechaIngreso = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.IdUsuario);
                 });
 
             migrationBuilder.CreateTable(
@@ -209,6 +263,12 @@ namespace Talento.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "CandidatoViewModel");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

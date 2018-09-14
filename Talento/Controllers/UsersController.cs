@@ -34,7 +34,7 @@ namespace Talento.Controllers
             }
 
             var users = await _context.Users
-                .FirstOrDefaultAsync(m => m.IdUsuario == id);
+                .FirstOrDefaultAsync(m => m.Id_Usuario == id);
             if (users == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace Talento.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdUsuario,Membresia,Apaterno,Amaterno,Nombre,Empresa,GiroEmpresa,Puesto,Telefono,Correo,Ciudad,FechaIngreso")] Users users)
+        public async Task<IActionResult> Create([Bind("Id_Usuario,Membresia,Apaterno,Amaterno,Nombre,Empresa,GiroEmpresa,Puesto,Telefono,Correo,Ciudad,TipoMembresia,FechaIngreso")] Users users)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +86,9 @@ namespace Talento.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdUsuario,Membresia,Apaterno,Amaterno,Nombre,Empresa,GiroEmpresa,Puesto,Telefono,Correo,Ciudad,TipoMembresia,FechaIngreso")] Users users)
+        public async Task<IActionResult> Edit(int id, [Bind("Id_Usuario,Membresia,Apaterno,Amaterno,Nombre,Empresa,GiroEmpresa,Puesto,Telefono,Correo,Ciudad,TipoMembresia,FechaIngreso")] Users users)
         {
-            if (id != users.IdUsuario)
+            if (id != users.Id_Usuario)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace Talento.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsersExists(users.IdUsuario))
+                    if (!UsersExists(users.Id_Usuario))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace Talento.Controllers
             }
 
             var users = await _context.Users
-                .FirstOrDefaultAsync(m => m.IdUsuario == id);
+                .FirstOrDefaultAsync(m => m.Id_Usuario == id);
             if (users == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace Talento.Controllers
 
         private bool UsersExists(int id)
         {
-            return _context.Users.Any(e => e.IdUsuario == id);
+            return _context.Users.Any(e => e.Id_Usuario == id);
         }
     }
 }

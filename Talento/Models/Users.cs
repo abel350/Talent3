@@ -8,7 +8,7 @@ namespace Talento.Models
     public partial class Users
     {
         [Key]
-        public int IdUsuario { get; set; }
+        public int Id_Usuario { get; set; }
         public string Membresia { get; set; }
         [Required(ErrorMessage = "Debes Ingresar tu Apellido Paterno")]
         [StringLength(50)]
@@ -31,7 +31,7 @@ namespace Talento.Models
         [Required]
         [StringLength(10)]
         [DataType(DataType.PhoneNumber, ErrorMessage ="Telefono no válido")]
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         
         [Required]
         [StringLength(50)]

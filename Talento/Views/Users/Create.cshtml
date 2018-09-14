@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    
 }
 
 <h2>Create</h2>
@@ -56,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" class="form-control" disabled="disabled" value="@User.Identity.Name" />
+                <input asp-for="Correo" class="form-control" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -66,8 +65,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="TipoMembresia" class="control-label"></label>
-                <input asp-for="TipoMembresia" class="form-control" disabled="disabled" value="Silver"/>
-                <span asp-validation-for="TipoMembresia"  class="text-danger"></span>
+                <input asp-for="TipoMembresia" class="form-control" />
+                <span asp-validation-for="TipoMembresia" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FechaIngreso" class="control-label"></label>
@@ -82,7 +81,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Regresar a la lista</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

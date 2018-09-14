@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Talento.Data;
 
-namespace Talento.Data.Migrations
+namespace Talento.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180914005843_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,9 +186,76 @@ namespace Talento.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Talento.Models.UsersViewModel", b =>
+            modelBuilder.Entity("Talento.Models.CandidatoViewModel", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdCandidato")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Amaterno")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Apaterno")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<bool>("AvisoPrivacidad");
+
+                    b.Property<int>("Celular")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("Ciudad")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<int>("CodigoPostal");
+
+                    b.Property<string>("Comentarios")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<int>("Edad")
+                        .HasMaxLength(2);
+
+                    b.Property<string>("Escolaridad")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<DateTime>("FechaDeNacimineto");
+
+                    b.Property<DateTime>("FechaRegistro");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Pais")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<int>("SueldoDeseado");
+
+                    b.Property<int>("Telefono")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("UltimoPuesto")
+                        .HasMaxLength(100);
+
+                    b.HasKey("IdCandidato");
+
+                    b.ToTable("CandidatoViewModel");
+                });
+
+            modelBuilder.Entity("Talento.Models.Users", b =>
+                {
+                    b.Property<int>("IdUsuario")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -204,31 +273,39 @@ namespace Talento.Data.Migrations
 
                     b.Property<string>("Correo")
                         .IsRequired()
-                        .HasMaxLength(100);
+                        .HasMaxLength(50);
 
                     b.Property<string>("Empresa")
                         .IsRequired()
                         .HasMaxLength(255);
 
+                    b.Property<DateTime?>("FechaIngreso")
+                        .IsRequired();
+
                     b.Property<string>("GiroEmpresa")
                         .IsRequired()
                         .HasMaxLength(255);
 
-                    b.Property<int>("Nombre")
+                    b.Property<string>("Membresia");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasMaxLength(50);
 
                     b.Property<string>("Puesto")
                         .IsRequired()
-                        .HasMaxLength(255);
+                        .HasMaxLength(250);
 
                     b.Property<int>("Telefono")
-                        .HasMaxLength(50);
+                        .HasMaxLength(10);
 
-                    b.Property<string>("UID");
+                    b.Property<string>("TipoMembresia")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
-                    b.HasKey("Id");
+                    b.HasKey("IdUsuario");
 
-                    b.ToTable("UsersViewModel");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

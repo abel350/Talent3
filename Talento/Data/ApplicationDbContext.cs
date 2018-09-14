@@ -13,7 +13,7 @@ namespace Talento.Data
             : base(options)
         {
         }
-        public DbSet<Talento.Models.Users> Users { get; set; }
+        public new DbSet<Talento.Models.Users> Users { get; set; }
         public DbSet<Talento.Models.CandidatoViewModel> CandidatoViewModel { get; set; }
 
     }

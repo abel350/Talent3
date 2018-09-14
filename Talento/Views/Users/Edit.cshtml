@@ -1,19 +1,29 @@
 ﻿@model Talento.Models.Users
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Usuario";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+@using Microsoft.AspNetCore.Identity
 
-<h4>Users</h4>
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+
+@{
+    var algo = UserManager.Users;
+
+    
+        }
+<h2>Editar usuario</h2>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdUsuario" />
+            <input type="hidden" asp-for="Id_Usuario" />
             <div class="form-group">
                 <label asp-for="Membresia" class="control-label"></label>
                 <input asp-for="Membresia" class="form-control" />
@@ -61,28 +71,38 @@
             </div>
             <div class="form-group">
                 <label asp-for="Ciudad" class="control-label"></label>
-                <input asp-for="Ciudad" class="form-control" />
+                <input asp-for="Ciudad" class="form-control"  />
                 <span asp-validation-for="Ciudad" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TipoMembresia" class="control-label"></label>
+                <select asp-for="TipoMembresia" id="inputState" title="Tipo de Memebresía" class="form-control" >                   
+                    <option selected>Silver</option>
+                    <option>Gold</option>
+                    <option>Consultor</option>
+                    <option>Alfa</option>
+                    <option>Admin</option>
+                </select>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="TipoMembresia" class="control-label"></label>
                 <input asp-for="TipoMembresia" class="form-control" />
                 <span asp-validation-for="TipoMembresia" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="FechaIngreso" class="control-label"></label>
                 <input asp-for="FechaIngreso" class="form-control" />
                 <span asp-validation-for="FechaIngreso" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-lg btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-lg btn-outline-primary" asp-action="Index">Volver a la lista de usuarios</a>
 </div>
 
 @section Scripts {
