@@ -14,9 +14,27 @@
 @{
     var algo = UserManager.Users;
 
-    
-        }
-<h2>Editar usuario</h2>
+
+}
+
+<style>
+    .sidebar .nav-link.active {
+        color: #fff;
+        background: #DE1679;
+    }
+    .Titulo {
+        width: 100%;
+        height: auto;
+        background-color: #DE1679;
+        color: white;
+    }
+</style>
+<div class="row">
+    <div class="Titulo">
+        <h1 style="padding:25px 20px 20px 100px;"><b>Modificar Usuario</b></h1>
+
+    </div>
+</div>
 
 <hr />
 <div class="row">
@@ -71,12 +89,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Ciudad" class="control-label"></label>
-                <input asp-for="Ciudad" class="form-control"  />
+                <input asp-for="Ciudad" class="form-control" />
                 <span asp-validation-for="Ciudad" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TipoMembresia" class="control-label"></label>
-                <select asp-for="TipoMembresia" id="inputState" title="Tipo de Memebresía" class="form-control" >                   
+                <select asp-for="TipoMembresia" id="inputState" title="Tipo de Memebresía" class="form-control">
                     <option selected>Silver</option>
                     <option>Gold</option>
                     <option>Consultor</option>
@@ -85,10 +103,10 @@
                 </select>
             </div>
             @*<div class="form-group">
-                <label asp-for="TipoMembresia" class="control-label"></label>
-                <input asp-for="TipoMembresia" class="form-control" />
-                <span asp-validation-for="TipoMembresia" class="text-danger"></span>
-            </div>*@
+                    <label asp-for="TipoMembresia" class="control-label"></label>
+                    <input asp-for="TipoMembresia" class="form-control" />
+                    <span asp-validation-for="TipoMembresia" class="text-danger"></span>
+                </div>*@
             <div class="form-group">
                 <label asp-for="FechaIngreso" class="control-label"></label>
                 <input asp-for="FechaIngreso" class="form-control" />

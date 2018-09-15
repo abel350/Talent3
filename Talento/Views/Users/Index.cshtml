@@ -6,23 +6,44 @@
 }
 
 <style>
+    .sidebar .nav-link.active {
+        color: #fff;
+        background: #DE1679;
+    }
     th {
-        font-size:medium;
+        font-size: medium;
     }
-    td a{
+
+    td a {
         color: black;
     }
-    td a:hover {
-        font-weight:bold;
-        color: black;
+
+        td a:hover {
+            font-weight: bold;
+            color: black;
+        }
+
+        table {
+            margin-top:50px;
+        }
+    .Titulo {
+        width: 100%;
+        height: auto;
+        background-color: #DE1679;
+        color: white;
     }
 </style>
 
-<h2>Lista de Usuarios</h2>
+<div class="row">
+    <div class="Titulo">
+        <h1 style="padding:25px 20px 20px 100px;"><b>Usuarios</b></h1>
+
+    </div>
+</div>
 
 @*<p>
-    <a asp-action="Create">Create New</a>
-</p>*@
+        <a asp-action="Create">Create New</a>
+    </p>*@
 <table class="table table-responsive-sm table-hover table-outline mb-0 table-success">
     <thead class="table-info">
         <tr>
@@ -66,50 +87,51 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Membresia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apaterno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Amaterno)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Empresa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiroEmpresa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Puesto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Correo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ciudad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoMembresia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaIngreso)
-            </td>
-            <td>
-                <a class="btn btn-primary"  asp-action="Edit" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a> |
-                @*<a asp-action="Details" asp-route-id="@item.Id_Usuario">Details</a> |*@
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash"></i></a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Membresia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apaterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amaterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiroEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Puesto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoMembresia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaIngreso)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a> |
+                    @*<a asp-action="Details" asp-route-id="@item.Id_Usuario">Details</a> |*@
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
