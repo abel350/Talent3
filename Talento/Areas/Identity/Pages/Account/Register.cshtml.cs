@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Talento.Clases;
 using Talento.Models;
 
 namespace Talento.Areas.Identity.Pages.Account
@@ -25,6 +27,7 @@ namespace Talento.Areas.Identity.Pages.Account
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger
+
            /* IEmailSender emailSender*/)
         {
             _userManager = userManager;
@@ -38,8 +41,15 @@ namespace Talento.Areas.Identity.Pages.Account
 
         public string ReturnUrl { get; set; }
 
+        public Users Usuario { get; set; }
+
         public class InputModel
         {
+            [Required]
+            [StringLength(50)]
+            [Display(Name = "Nombre de Usuario")]
+            public string Nombre { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Correo Electrónico")]
@@ -55,6 +65,18 @@ namespace Talento.Areas.Identity.Pages.Account
             [Display(Name = "Confirmar Contraseña:")]
             [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
             public string ConfirmPassword { get; set; }
+
+            //[Required]
+            //[StringLength(50)]
+            //[Display(Name = "Ciudad")]
+            //public string Ciudad { get; set; }
+
+            [Required]
+            [StringLength(50)]
+            [Display(Name = "Estado")]
+            public string Estado { get; set; }
+
+
         }
 
         public void OnGet(string returnUrl = null)
@@ -67,10 +89,20 @@ namespace Talento.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                DataTable dt = new DataTable();
+                dt = Estados.Consec(Input.Estado);
+                int cons = Convert.ToInt32(dt.Rows[0][0].ToString()) +1;
+                string corto = Estados.Abreviatura(Input.Estado);
+
+                string consformat = string.Format("{0:0000}", cons);
+
+                string membresia = corto + "-" + consformat;
+
+                var user = new IdentityUser { UserName = Input.Nombre, Email = Input.Email };
+                var usuario = new Users { UID = user.Id ,Nombre = Input.Nombre,Ciudad = Input.Estado, Membresia = membresia,Correo=Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
-                {
+                { 
                     //_logger.LogInformation("El usuario creó una nueva cuenta con contraseña.");
 
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -85,6 +117,9 @@ namespace Talento.Areas.Identity.Pages.Account
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     await _userManager.AddToRoleAsync(user, "Silver");
+                    Usuarios.InsertaUsuario(usuario);
+                    Estados.ActualizarConsecutivo(cons, Input.Estado);
+                    
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)

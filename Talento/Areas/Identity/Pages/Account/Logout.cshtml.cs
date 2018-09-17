@@ -33,7 +33,7 @@ namespace Talento.Areas.Identity.Pages.Account
             _logger.LogInformation("Usuario desconectado");
             if (returnUrl != null)
             {
-                return LocalRedirect(returnUrl);
+                return LocalRedirect("/?view = index");
             }
             else
             {

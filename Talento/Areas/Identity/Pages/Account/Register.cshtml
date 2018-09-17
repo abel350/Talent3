@@ -2,6 +2,11 @@
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
+
+
+    System.Data.DataTable dt = new System.Data.DataTable();
+    dt = Talento.Clases.Estados.DatosEstados();
+
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -12,6 +17,36 @@
             <h4>Crear Nueva Cuenta</h4>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Nombre"></label>
+                <input asp-for="Input.Nombre" class="form-control" />
+                <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+            </div>
+           
+                
+            <div class="form-group">
+                <label asp-for="Input.Estado"></label>
+                <select asp-for="Input.Estado" id="inputState" title="Tipo de Memebresía" class="form-control">
+
+                    @{for (int i =0; i<dt.Rows.Count; i++)
+                        {
+                            if(i == 0)
+                            {
+                            <option selected>@dt.Rows[i][1].ToString().Trim()</option>
+                            }
+                            else
+                            {                            
+                             <option>@dt.Rows[i][1].ToString().Trim()</option>
+                            }
+                        }
+
+                    }
+                </select>
+                <span asp-validation-for="Input.Estado" class="text-danger"></span>
+            </div>
+                @*<input asp-for="Input.Estado" class="form-control" />*@
+               
+           
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />

@@ -1,108 +1,123 @@
 ﻿@model Talento.Models.Users
 
 @{
-    ViewData["Title"] = "Perfil";
+    ViewData["Title"] = "Editar Usuario";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+@using Talento.Clases
+@using System.Data
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+
+@{
+
+    var user = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+    DataTable dt = new DataTable();
+
+    dt = Usuarios.DatosUsuario(user);
+
+}
 
 <style>
     .sidebar .nav-link.active {
         color: #fff;
         background: #DE1679;
     }
-
-
     .Titulo {
         width: 100%;
         height: auto;
         background-color: #DE1679;
         color: white;
     }
-    
-
 </style>
-
-
 <div class="row">
     <div class="Titulo">
-        <h1 style="padding:25px 20px 20px 100px;"><b>Mi Perfil</b></h1>
+        <h1 style="padding:25px 20px 20px 100px;"><b>Perfil</b></h1>
 
     </div>
 </div>
 
-
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Edit" class="">
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @{
+            <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id_Usuario" />
                 <div class="form-group">
                     <label asp-for="Membresia" class="control-label"></label>
-                    <input asp-for="Membresia" class="form-control" />
+                    <input asp-for="Membresia" class="form-control" disabled="disabled" value="@dt.Rows[0][1]" />
                     <span asp-validation-for="Membresia" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Apaterno" class="control-label"></label>
-                    <input asp-for="Apaterno" class="form-control" />
+                    <input asp-for="Apaterno" class="form-control" value="@dt.Rows[0][2]"/>
                     <span asp-validation-for="Apaterno" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Amaterno" class="control-label"></label>
-                    <input asp-for="Amaterno" class="form-control" />
+                    <input asp-for="Amaterno" class="form-control" value="@dt.Rows[0][3]"/>
                     <span asp-validation-for="Amaterno" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
-                    <input asp-for="Nombre" class="form-control" />
+                    <input asp-for="Nombre" class="form-control" value="@dt.Rows[0][4]"/>
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Empresa" class="control-label"></label>
-                    <input asp-for="Empresa" class="form-control" />
+                    <input asp-for="Empresa" class="form-control" value="@dt.Rows[0][5]"/>
                     <span asp-validation-for="Empresa" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="GiroEmpresa" class="control-label"></label>
-                    <input asp-for="GiroEmpresa" class="form-control" />
+                    <input asp-for="GiroEmpresa" class="form-control" value="@dt.Rows[0][6]"/>
                     <span asp-validation-for="GiroEmpresa" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Puesto" class="control-label"></label>
-                    <input asp-for="Puesto" class="form-control" />
+                    <input asp-for="Puesto" class="form-control" value="@dt.Rows[0][7]"/>
                     <span asp-validation-for="Puesto" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
-                    <input asp-for="Telefono" class="form-control" />
+                    <input asp-for="Telefono" class="form-control" value="@dt.Rows[0][8]"/>
                     <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Correo" class="control-label"></label>
-                    <input asp-for="Correo" class="form-control" />
+                    <input asp-for="Correo" class="form-control" disabled="disabled" value="@dt.Rows[0][9]"/>
                     <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Ciudad" class="control-label"></label>
-                    <input asp-for="Ciudad" class="form-control" />
-                    <span asp-validation-for="Ciudad" class="text-danger"></span>
+                    <label  class="control-label">Estado</label>
+                    <input asp-for="Ciudad" class="form-control" disabled="disabled" value="@dt.Rows[0][10]"/>
+                    <span asp-validation-for="Ciudad" class="text-danger" ></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="TipoMembresia" class="control-label"></label>
+                    <input asp-for="TipoMembresia" class="form-control" disabled="disabled" value="@dt.Rows[0][11]" />
+                   
+                </div>
+                @*<div class="form-group">
+                    <label asp-for="TipoMembresia" class="control-label"></label>
                     <input asp-for="TipoMembresia" class="form-control" />
                     <span asp-validation-for="TipoMembresia" class="text-danger"></span>
-                </div>
+                </div>*@
+               
                 <div class="form-group">
-                    <label asp-for="FechaIngreso" class="control-label"></label>
-                    <input asp-for="FechaIngreso" class="form-control" />
-                    <span asp-validation-for="FechaIngreso" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                    <input type="submit" value="Guardar" class="btn btn-lg btn-primary" />
                 </div>
             </form>
-        </div>
+        }
     </div>
-
+</div>
 
 
 @section Scripts {
