@@ -136,11 +136,14 @@ else
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="" asp-action="" asp-route-view="">
-                    Debes de identificarte para poder ver el menú del sistema.
+                    <p>Debes de identificarte para poder ver el menú del sistema.</p>
                 </a>
             </li>
-            <li class="nav-item">                
+            <li class="nav-item">
                 <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Acceder ahora</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Registrarse</a>
             </li>
         </ul>
     </nav>

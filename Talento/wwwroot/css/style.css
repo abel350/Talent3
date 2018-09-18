@@ -12,6 +12,8 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 :root {
   --blue: #20a8d8;
   --indigo: #6610f2;
@@ -77,14 +79,14 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #23282c;
-  text-align: left;
-  background-color: #e4e5e6;
+    margin: 0;
+    font-family: 'Montserrat',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #23282c;
+    text-align: left;
+    background-color: #e4e5e6;
 }
 
 [tabindex="-1"]:focus {
@@ -11119,11 +11121,10 @@ canvas {
     position: relative;
     -ms-flex-direction: row;
     flex-direction: row;
-    height: 55px;
+    height: 40px;
     padding: 0;
     margin: 0;
     background-color: #074FF3;
-    border-bottom: 1px solid #c8ced3;
 }
 
 .app-header .navbar-brand {
@@ -11166,11 +11167,12 @@ canvas {
 }
 
 .app-header .nav-item {
-  position: relative;
-  min-width: 50px;
-  margin: 0;
-  text-align: center;
-}
+        position: relative;
+        min-width: 50px;
+        margin: 0;
+        font-size: .84em;
+        text-align: center;
+    }
 
 .app-header .nav-item button {
   margin: 0 auto;
@@ -11182,7 +11184,7 @@ canvas {
   background: 0;
   border: 0;
   color:#fff;
-  font-size:18px;
+  font-size:1em;
 }
 
 .app-header .nav-item .nav-link .badge {
@@ -11598,6 +11600,7 @@ canvas {
 
 .sidebar .nav-item {
   position: relative;
+  font-size: .9em;
   margin: 0;
   transition: background .3s ease-in-out;
 }
@@ -12669,7 +12672,7 @@ html[dir="rtl"] .aside-menu {
     width: 100%;
   }
   .header-fixed .app-body {
-    margin-top: 55px;
+    margin-top: 0px;
   }
   .sidebar-fixed .sidebar {
     position: fixed;
@@ -13450,7 +13453,7 @@ html[dir="rtl"] .aside-menu-show .aside-menu {
     margin-left: -77.5px;
   }
   .app-body {
-    margin-top: 55px;
+    margin-top: 0px;
   }
   .sidebar {
     position: fixed;
@@ -14268,3 +14271,12 @@ body {
   breakpoint-xl: 1200px;
 }
 /*# sourceMappingURL=style.css.map */
+
+.carousel-caption {
+    max-width: 100%;
+    width: 100%;
+    left: 0;
+}
+div#myCarousel h1 {
+    font-size: 3em !important;
+}
