@@ -10,12 +10,17 @@ namespace Talento.Clases
 {
     public class Usuarios
     {
-
+        
 
         public static void InsertaUsuario( string Membresia, string Nombre, string Correo, string Ciudad, string UID )
         {
 
-            SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
+            //SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
+
+            Conexion conex = new Conexion();
+
+            SqlConnection cn = conex.ObtenerConexion();
+
             SqlCommand consulta = new SqlCommand(string.Format("INSERT INTO [dbo].[Users] ([Membresia],[Apaterno],[Amaterno],[Nombre],[Empresa],[GiroEmpresa],[Puesto],[telefono],[Correo],[Ciudad],[TipoMembresia],[fechaIngreso],[UID]) VALUES (@Membresia, @Apaterno, @Amaterno, @Nombre, @Empresa, @GiroEmpresa, @Puesto, @Telefono, @Correo, @Ciudad, @TipoMemebresia, @FechaIngreso, @UID)"), cn);
             consulta.Parameters.AddWithValue("@Membresia", Membresia);
             consulta.Parameters.AddWithValue("@Apaterno", "");
@@ -38,7 +43,10 @@ namespace Talento.Clases
         public static DataTable DatosUsuario(string user)
         {
 
-            SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
+
+            Conexion conex = new Conexion();
+
+            SqlConnection cn = conex.ObtenerConexion();
 
             SqlCommand consulta = new SqlCommand(string.Format("SELECT * FROM Users WHERE UID =@UID"), cn);
             consulta.Parameters.AddWithValue("@UID", user);

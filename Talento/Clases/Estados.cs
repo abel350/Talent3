@@ -59,7 +59,10 @@ namespace Talento.Clases
            public static DataTable Consec (string Estado)
         {
 
-            SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
+
+            Conexion conex = new Conexion();
+
+            SqlConnection cn = conex.ObtenerConexion();
 
             SqlCommand consulta = new SqlCommand(string.Format("SELECT Consecutivo  FROM Estados  where estado = @Edo"), cn);
                 consulta.Parameters.AddWithValue("@Edo", Estado);
@@ -73,10 +76,13 @@ namespace Talento.Clases
     
             public static DataTable DatosEstados()
                  {
-                         
-                SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
 
-                SqlCommand consulta = new SqlCommand(string.Format("SELECT * FROM Estados"), cn);
+
+            Conexion conex = new Conexion();
+
+            SqlConnection cn = conex.ObtenerConexion();
+
+            SqlCommand consulta = new SqlCommand(string.Format("SELECT * FROM Estados"), cn);
                     SqlDataAdapter da = new SqlDataAdapter(consulta);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -88,7 +94,10 @@ namespace Talento.Clases
         public static void ActualizarConsecutivo(int Cons, string estado)
         {
 
-            SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
+
+            Conexion conex = new Conexion();
+
+            SqlConnection cn = conex.ObtenerConexion();
             SqlCommand consulta = new SqlCommand(string.Format("UPDATE [dbo].[Estados] SET Consecutivo = @consec WHERE Estado = @Edo "), cn);
             consulta.Parameters.AddWithValue("@consec", Cons);
             consulta.Parameters.AddWithValue("@Edo", estado);
