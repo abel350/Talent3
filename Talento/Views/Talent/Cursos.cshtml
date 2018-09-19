@@ -1,75 +1,72 @@
 ﻿
 @{
-    ViewData["Title"] = "View";
+    ViewData["Title"] = "Cursos y certificaciones";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-<style>
-    .sidebar .nav-link.active {
-        color: #fff;
-        background: #DE1679;
-    }
-
-    .main .container-fluid {
-        padding: 0;
-    }
-    .cuadro-verde{
-        background-color:#92d882;
-    }
-    .col-md-4 h5 {
-        background-color:#074ff3;
-        color: #fff;
-        padding-top:10px;
-        padding-bottom:10px;
-    }
-</style>
-    <div class="row">
-        <div style="width:100%; height:auto; background-color:#DE1679;color: white;" >
-          <h1 style="padding:25px 20px 20px 100px;"><b>Cursos y Certificaciones</b></h1>
-        
-        </div>
+    
+<div class="row">
+    <div class="title">
+        <h1 class="font-weight-bold">Cursos y Certificaciones</h1>
     </div>
+</div>
+
     <div class="container">
-        <div class="row text-center" style="margin-top:30px;">
-            <div class="col-md-8">
+        <div class="row text-center mt-3">
+            <div class="col-md-7">
                 <div class="row ">
                     <div class="col-md-4">
-                        <img class="img-thumbnail" src="~/images/Cursos/Recurso 6.png" alt="CURSOS VIRTUALES" />
-                        <h5>JUEVES <br />DE WEBINAR'S</h5>
+                        <a href="https://networkingtalento.classonlive.com/" target="_blank">
+                            <img class="img-thumbnail" src="~/images/Cursos/Recurso 6.png" alt="CURSOS VIRTUALES" />
+                            <h5>JUEVES <br />DE WEBINAR'S</h5>
+                        </a>
                     </div>
 
                     <div class="col-md-4">
-                        <img class="img-thumbnail" src="~/images/Cursos/elearning.png" alt="CURSOS VIRTUALES" />
-                        <h5>CURSOS <br /> VIRTUALES</h5>
+                        <a target="_blank" href="https://networkingtalento2.wixsite.com/afiliados-servicios/presenciales">
+                            <img class="img-thumbnail" src="~/images/Cursos/elearning.png" alt="CURSOS VIRTUALES" />
+                            <h5>CURSOS <br /> VIRTUALES</h5>
+                        </a>
                     </div>
 
                     <div class="col-md-4">
-                        <img class="img-thumbnail" src="~/images/Cursos/online-education.png" alt="CURSOS VIRTUALES" />
-                        <h5>CURSOS <BR /> ONLINE</h5>
+                        <a href="https://networkingtalento.classonlive.com/" target="_blank">
+                            <img class="img-thumbnail" src="~/images/Cursos/online-education.png" alt="CURSOS VIRTUALES" />
+                            <h5>CURSOS <BR /> ONLINE</h5>
+                        </a>
                     </div>
                 </div>
-                <div class="row" style="margin-top:50px;">
+                <div class="row">
                     <div class="col-md-4">
-                        <img class="img-thumbnail" src="~/images/Cursos/Recurso 10.png" alt="CURSOS VIRTUALES" />
-                        <h5>CURSOS <BR />PRESENCIALES</h5>
+                        <a href="https://networkingtalento2.wixsite.com/afiliados-servicios/presenciales" target="_blank">
+                            <img class="img-thumbnail" src="~/images/Cursos/Recurso 10.png" alt="CURSOS VIRTUALES" />
+                            <h5>CURSOS <BR />PRESENCIALES</h5>
+                        </a>
                     </div>
 
                     <div class="col-md-4">
-                        <img class="img-thumbnail" src="~/images/Cursos/computer.png" alt="CURSOS VIRTUALES" />
-                        <h5>VIDEOTECA <BR />DE WEBINAR´S</h5>
+                        <a href="https://www.gotostage.com/channel/c4d8c56b7e4a4751aaa839425c68f3ce" target="_blank">
+                            <img class="img-thumbnail" src="~/images/Cursos/computer.png" alt="CURSOS VIRTUALES" />
+                            <h5>VIDEOTECA <BR />DE WEBINAR´S</h5>
+                        </a>
                     </div>
 
                     <div class="col-md-4">
-                        <img class="img-thumbnail" src="~/images/Cursos/youtube.jpg" alt="CURSOS VIRTUALES" />
-                        <h5>VER <BR /> TUTORIALES</h5>
+                        <a href="https://www.youtube.com/channel/UC9tGkvf95R7QmSQiP6LixLQ/videos" target="_blank">
+                            <img class="img-thumbnail" src="~/images/Cursos/youtube.jpg" alt="CURSOS VIRTUALES" />
+                            <h5>VER <BR /> TUTORIALES</h5>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="cuadro-verde" style="height:100%; width:100%;">
-                    <h1 style="padding:30px 30px 30px 30px">ACADEMIA TALENTO 2.0</h1>
-                    <H3 style="padding:30px 30px 30px 30px">Te ofrecemos muchos cursos y capacitaciones gratuitos y muchos otros con tarifas preferentes con hasta un <B>30% de descuento!!</B></H3>
-                </div>
+            <div class="col-md-5">
+                <div class="jumbotron bg-light">
+                    <h1 class="display-4">Academia de Talento 2.0</h1>
+                    <p class="lead">Te ofrecemos muchos cursos y capacitaciones gratuitos y muchos otros con tarifas preferentes</p>
+                    <hr class="my-4">
+                    <h2>30% de descuento</h2>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Leer más</a>
+                </div>                
             </div>
-        </div>   
+        </div>
     </div>
