@@ -47,7 +47,7 @@ namespace Talento.Models
         [DataType(DataType.Date,ErrorMessage ="")]
         public DateTime? FechaIngreso { get; set; }
         [ForeignKey("Id")]
-        public string UID { get; set; }
+        public virtual ICollection<Users> UID { get; set; }
         public Users IdUsuarioNavigation { get; set; }
         public Users InverseIdUsuarioNavigation { get; set; }
     }

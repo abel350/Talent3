@@ -99,7 +99,6 @@ namespace Talento.Areas.Identity.Pages.Account
                 string membresia = corto + "-" + consformat;
 
                 var user = new IdentityUser { UserName = Input.Nombre, Email = Input.Email };
-                var usuario = new Users { UID = user.Id ,Nombre = Input.Nombre,Ciudad = Input.Estado, Membresia = membresia,Correo=Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 { 
@@ -117,7 +116,8 @@ namespace Talento.Areas.Identity.Pages.Account
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     await _userManager.AddToRoleAsync(user, "Silver");
-                    Usuarios.InsertaUsuario(usuario);
+                    Usuarios.InsertaUsuario(membresia,user.UserName,user.Email,Input.Estado,user.Id);
+                    
                     Estados.ActualizarConsecutivo(cons, Input.Estado);
                     
                     return LocalRedirect(returnUrl);
