@@ -13,7 +13,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 :root {
   --blue: #20a8d8;
   --indigo: #6610f2;
@@ -14279,4 +14280,24 @@ body {
 }
 div#myCarousel h1 {
     font-size: 3em !important;
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background: #DE1679;
+}
+
+.main .container-fluid {
+    padding: 0;
+}
+
+.cuadro-verde {
+    background-color: #92d882;
+}
+
+.col-md-4 h5 {
+    background-color: #074ff3;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
