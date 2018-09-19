@@ -54,7 +54,7 @@ namespace Talento.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_Usuario,Membresia,Apaterno,Amaterno,Nombre,Empresa,GiroEmpresa,Puesto,Telefono,Correo,Ciudad,TipoMembresia,FechaIngreso")] Users users)
+        public async Task<IActionResult> Perfil([Bind("Id_Usuario,Membresia,Apaterno,Amaterno,Nombre,Empresa,GiroEmpresa,Puesto,Telefono,Correo,Ciudad,TipoMembresia,FechaIngreso")] Users users)
         {
             if (ModelState.IsValid)
             {
