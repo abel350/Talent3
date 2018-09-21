@@ -1,6 +1,9 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 
+
 /* Make .svg files in the carousel display properly in older browsers */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 .carousel-inner .item img[src$=".svg"] {
     width: 100%;
 }
@@ -25,15 +28,15 @@
     height: 40px;
     padding: 0;
     margin: 0;
-    background-color: #3c3c47;
+    background-color: #2d2d31;
 }
 .title {
     width: 100%;
     height: auto;
-    background-color: #DE1679;
-    color: white;
-    font-weight:900;
-    padding: 25px 20px 20px 100px;
+    background-color: #004e9c;
+    color: #00f54d;
+    font-weight: 900;
+    padding: 21px 40px 20px 40px
 }
 
 .sidebar .nav-link.active .nav-icon {
@@ -43,7 +46,7 @@
 
 /*CSS EBOOK Y GUIAS*/
 
-#ebooks-guias.sidebar .nav-link.active {
+.sidebar .nav-link.active {
     color: #fff;
     background: #DE1679;
 }
@@ -103,3 +106,66 @@
     left: 0;
 }
 /*END CSS EBOOKS Y GUIAS*/
+
+
+
+.sidebar .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-size: .9em;
+    text-decoration: none;
+    background: transparent;
+}
+
+.app-footer {
+    color: #000;
+    font-size:.8em;
+}
+
+.app-header .nav-item {
+    position: relative;
+    min-width: 50px;
+    margin: 0;
+    font-size: .8em;
+    font-family: 'Lato';
+}
+
+th {
+    font-size: 0.8em !important;
+}
+
+.table-outline td {
+    vertical-align: middle;
+    font-size: .8em;
+}
+
+.table th, .table td {
+    padding: 0.30rem;
+    vertical-align: middle;
+    border-top: 1px solid #c8ced3;
+}
+
+.table thead th {
+    vertical-align: middle;
+    border-bottom: 2px solid #c8ced3;
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background: #00de46;
+}
+#whatsapp a {
+    margin-bottom: 1em;
+    width: 100%;
+    font-size:.9em;
+}
+
+
+
+#difusion-facebook h5 {
+    background-color: #0094ff;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

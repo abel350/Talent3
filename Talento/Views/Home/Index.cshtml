@@ -5,54 +5,56 @@
 @section Styles {
     
 }
+<div class="container mt-3">
+    <div id="myCarousel" class="carousel slide d-block" data-ride="carousel" data-interval="6000">
 
-<div id="myCarousel" class="carousel slide d-none d-sm-block" data-ride="carousel" data-interval="6000">
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="~/images/Recurso_2.png" alt="ASP.NET" class="d-block w-100" />
-      <div class="carousel-caption" role="option">
-          <div class="row" style="margin-bottom:-40px">
-              <div class="col-sm-12 col-md-4 " style="color:black">
-                  <h1 style="font-size:3.5rem;font-weight:800" class="align-self-center ml-4 mt-5">¡Bienvenido@@!</h1>
-                  <H2>@User.Identity.Name</H2>
-              </div>
-              <div class="col-xs-12 col-md-4">
-                  <img class="logo" src="~/images/logo.png" alt="Logo Talento" />
-              </div>
-              <div class=" d-xs-none d-sm-block col-sm-4">
-                  <img src="~/images/Recurso_1.png" alt="super heroes" class="d-block w-100"/>
-              </div>
-          </div>
-      </div>
-    </div>    
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <div class="cuadro_live">
-    <a href="#"><img class="img-fluid" src="~/images/facebook_live.jpg" alt="Facebook Live" /></a>
-  </div>
-</div>
-  
-  <div class="col-md-4">
-    <div class="cuadro_live">
-        <div class="v1" id="comp-j85by5v8" style="width: 100%; heght: 210px;">
-            <div tabindex="0" id="comp-j85by5v8videoFrame" class="v1videoFrame">
-                <iframe height="210px" width="100%" allowfullscreen="" frameborder="0" title="External YouTube" aria-label="External YouTube" src="//www.youtube.com/embed/y0B5CG4LcSk?wmode=transparent&amp;autoplay=1&amp;theme=dark&amp;controls=0&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0"></iframe>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/Recurso_2.png" alt="ASP.NET" class="d-block w-100" />
+                <div class="carousel-caption" role="option">
+                    <div class="row" style="margin-bottom:-40px">
+                        <div class="col-sm-12 col-md-4 text-body">
+                            <h1 class="align-self-center ml-4 mt-5 font-weight-bold">¡Bienvenido@@!</h1>
+                            <H2>@User.Identity.Name</H2>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <img class="logo" src="~/images/logo.png" alt="Logo Talento" />
+                        </div>
+                        <div class=" d-xs-none d-sm-block col-sm-4">
+                            <img src="~/images/Recurso_1.png" alt="super heroes" class="d-block w-100" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="comp-j85by5v8preview" class="v1preview" style="display: none;"></div>
         </div>
     </div>
-  </div>
 
-  <div class="col-md-4">
-          <h4 class="font-weight-bold mt-5">REGLAS DEL JUEGO</h4>
-          <p class="text-uppercase">Aviso de privacidad</p>
-          <p class="text-uppercase">Contacto</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="cuadro_live">
+                <a href="#"><img class="img-fluid" src="~/images/facebook_live.jpg" alt="Facebook Live" /></a>
+            </div>
+        </div>
 
-          <p>5215562546850</p>
-          <p>dunia@networkingtalento.net</p>
-  </div>
+        <div class="col-md-4">
+            <div class="cuadro_live">
+                <div class="v1" id="comp-j85by5v8" style="width: 100%; heght: 210px;">
+                    <div tabindex="0" id="comp-j85by5v8videoFrame" class="v1videoFrame">
+                        <iframe height="210px" width="100%" allowfullscreen="" frameborder="0" title="External YouTube" aria-label="External YouTube" src="//www.youtube.com/embed/y0B5CG4LcSk?wmode=transparent&amp;autoplay=1&amp;theme=dark&amp;controls=0&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0"></iframe>
+                    </div>
+                    <div id="comp-j85by5v8preview" class="v1preview" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h4 class="font-weight-bold mt-5">REGLAS DEL JUEGO</h4>
+            <p class="text-uppercase">Aviso de privacidad</p>
+            <p class="text-uppercase">Contacto</p>
+
+            <p>5215562546850</p>
+            <p>dunia@networkingtalento.net</p>
+        </div>
+    </div>
+
 </div>

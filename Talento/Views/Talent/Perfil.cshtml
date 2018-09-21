@@ -24,26 +24,15 @@
 
 }
 
-<style>
-    .sidebar .nav-link.active {
-        color: #fff;
-        background: #DE1679;
-    }
-    .Titulo {
-        width: 100%;
-        height: auto;
-        background-color: #DE1679;
-        color: white;
-    }
-</style>
-<div class="row">
-    <div class="Titulo">
-        <h1 style="padding:25px 20px 20px 100px;"><b>Perfil</b></h1>
 
+<div class="row">
+    <div class="title">
+        <h1 class="font-weight-bold">Mi Perfil</h1>
     </div>
 </div>
 
-<hr />
+<div class="container bg-gray-100 p-3 >
+
 <div class="row">
     <div class="col-md-4">
         @{
@@ -57,60 +46,60 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Apaterno" class="control-label"></label>
-                    <input asp-for="Apaterno" class="form-control" value="@dt.Rows[0][2]"/>
+                    <input asp-for="Apaterno" class="form-control" value="@dt.Rows[0][2]" />
                     <span asp-validation-for="Apaterno" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Amaterno" class="control-label"></label>
-                    <input asp-for="Amaterno" class="form-control" value="@dt.Rows[0][3]"/>
+                    <input asp-for="Amaterno" class="form-control" value="@dt.Rows[0][3]" />
                     <span asp-validation-for="Amaterno" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Nombre" class="control-label"></label>
-                    <input asp-for="Nombre" class="form-control" value="@dt.Rows[0][4]"/>
+                    <input asp-for="Nombre" class="form-control" value="@dt.Rows[0][4]" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Empresa" class="control-label"></label>
-                    <input asp-for="Empresa" class="form-control" value="@dt.Rows[0][5]"/>
+                    <input asp-for="Empresa" class="form-control" value="@dt.Rows[0][5]" />
                     <span asp-validation-for="Empresa" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="GiroEmpresa" class="control-label"></label>
-                    <input asp-for="GiroEmpresa" class="form-control" value="@dt.Rows[0][6]"/>
+                    <input asp-for="GiroEmpresa" class="form-control" value="@dt.Rows[0][6]" />
                     <span asp-validation-for="GiroEmpresa" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Puesto" class="control-label"></label>
-                    <input asp-for="Puesto" class="form-control" value="@dt.Rows[0][7]"/>
+                    <input asp-for="Puesto" class="form-control" value="@dt.Rows[0][7]" />
                     <span asp-validation-for="Puesto" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Telefono" class="control-label"></label>
-                    <input asp-for="Telefono" class="form-control" value="@dt.Rows[0][8]"/>
+                    <input asp-for="Telefono" class="form-control" value="@dt.Rows[0][8]" />
                     <span asp-validation-for="Telefono" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Correo" class="control-label"></label>
-                    <input asp-for="Correo" class="form-control" disabled="disabled" value="@dt.Rows[0][9]"/>
+                    <input asp-for="Correo" class="form-control" disabled="disabled" value="@dt.Rows[0][9]" />
                     <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label  class="control-label">Estado</label>
-                    <input asp-for="Ciudad" class="form-control" disabled="disabled" value="@dt.Rows[0][10]"/>
-                    <span asp-validation-for="Ciudad" class="text-danger" ></span>
+                    <label class="control-label">Estado</label>
+                    <input asp-for="Ciudad" class="form-control" disabled="disabled" value="@dt.Rows[0][10]" />
+                    <span asp-validation-for="Ciudad" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="TipoMembresia" class="control-label"></label>
                     <input asp-for="TipoMembresia" class="form-control" disabled="disabled" value="@dt.Rows[0][11]" />
-                   
+
                 </div>
                 @*<div class="form-group">
-                    <label asp-for="TipoMembresia" class="control-label"></label>
-                    <input asp-for="TipoMembresia" class="form-control" />
-                    <span asp-validation-for="TipoMembresia" class="text-danger"></span>
-                </div>*@
-               
+                        <label asp-for="TipoMembresia" class="control-label"></label>
+                        <input asp-for="TipoMembresia" class="form-control" />
+                        <span asp-validation-for="TipoMembresia" class="text-danger"></span>
+                    </div>*@
+
                 <div class="form-group">
                     <input type="submit" value="Guardar" class="btn btn-lg btn-primary" />
                 </div>
@@ -118,6 +107,9 @@
         }
     </div>
 </div>
+
+</div>
+
 
 
 @section Scripts {
