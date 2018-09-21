@@ -1,5 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 
+
 /* Make .svg files in the carousel display properly in older browsers */
 .carousel-inner .item img[src$=".svg"] {
     width: 100%;
@@ -10,96 +11,8 @@
     margin: 15px;
 }
 
-.col-md-4 h5 {
-    background-color: #074ff3;
-    font-size: .8em;
-    color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+.container-fluid > .animated {
+    margin-top: 24px !important;
 }
 
-.app-header {
-    position: relative;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-    background-color: #3c3c47;
-}
-.title {
-    width: 100%;
-    height: auto;
-    background-color: #DE1679;
-    color: white;
-    font-weight:900;
-    padding: 25px 20px 20px 100px;
-}
-
-.sidebar .nav-link.active .nav-icon {
-    color: #ffffff;
-}
-
-
-/*CSS EBOOK Y GUIAS*/
-
-#ebooks-guias.sidebar .nav-link.active {
-    color: #fff;
-    background: #DE1679;
-}
-
-.main .container-fluid {
-    padding: 0;
-}
-
-.col-md-4 h5 {
-    background-color: #0094ff;
-    color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.img-container {
-    width: auto;
-    height: auto;
-    background: none;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-    .img-container:before {
-        content: '';
-        width: inherit;
-        height: inherit;
-        position: absolute;
-        background: #fff;
-        opacity: 0;
-        transition: opacity .1s ease-out;
-    }
-
-    .img-container:hover:before {
-        opacity: 1;
-    }
-
-.text-container {
-    color: #444;
-    position: absolute;
-    top: 100%;
-    padding: 0.25rem;
-    background-color: rgba(10, 59, 196, 0.80);
-    border: 1px solid #c8ced3;
-    border-radius: 0.25rem;
-    width: 100%;
-    height: 100%;
-}
-
-/*input {
-    margin-top: 50%;
-}*/
-
-.img-container:hover .text-container {
-    top: 0;
-    left: 0;
-}
-/*END CSS EBOOKS Y GUIAS*/

@@ -35,6 +35,7 @@ namespace Talento.Clases
 
             return SqlConn = new SqlConnection(Configuration.GetConnectionString("DefaultConnection"));
 
+           
         }
 
 

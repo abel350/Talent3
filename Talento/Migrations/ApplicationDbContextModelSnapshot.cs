@@ -15,7 +15,7 @@ namespace Talento.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.3-rtm-32065")
+                .HasAnnotation("ProductVersion", "2.1.2-rtm-30932")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -136,9 +136,11 @@ namespace Talento.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("ProviderKey");
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -169,9 +171,11 @@ namespace Talento.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value");
 
@@ -249,7 +253,7 @@ namespace Talento.Migrations
 
             modelBuilder.Entity("Talento.Models.Users", b =>
                 {
-                    b.Property<int>("Id_Usuario")
+                    b.Property<int>("IdUsuario")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -290,15 +294,14 @@ namespace Talento.Migrations
                         .IsRequired()
                         .HasMaxLength(250);
 
-                    b.Property<string>("Telefono")
-                        .IsRequired()
+                    b.Property<int>("Telefono")
                         .HasMaxLength(10);
 
                     b.Property<string>("TipoMembresia")
                         .IsRequired()
                         .HasMaxLength(10);
 
-                    b.HasKey("Id_Usuario");
+                    b.HasKey("IdUsuario");
 
                     b.ToTable("Users");
                 });

@@ -6,9 +6,7 @@
 
 
 
-
 @if (User.Identity.IsAuthenticated)
-
 {
     <nav class="sidebar-nav">
         <ul class="nav">
@@ -77,7 +75,7 @@
                 </a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="CoreUI" asp-action="Index" asp-route-view="buttons-buttons">
+                        <a class="nav-link" asp-area="" asp-controller="Candidato" asp-action="Index" asp-route-view="AddCandidato">
                             Bolsa de Empleos TV
                         </a>
                     </li>
@@ -138,14 +136,11 @@ else
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="" asp-action="" asp-route-view="">
-                    <p>Debes de identificarte para poder ver el menú del sistema.</p>
+                    Debes de identificarte para poder ver el menú del sistema.
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item">                
                 <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Acceder ahora</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Registrarse</a>
             </li>
         </ul>
     </nav>

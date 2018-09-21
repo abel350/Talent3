@@ -9,7 +9,7 @@ using Talento.Models;
 
 namespace Talento.Controllers
 {
-    [Route("CoreUI")]
+    [Route("Home")]
     public class TalentController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -52,9 +52,9 @@ namespace Talento.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Perfil" , "Home");
             }
-            return View(users);
+            return RedirectToAction("Index", "Home");
         }
         private bool UsersExists(int id)
         {

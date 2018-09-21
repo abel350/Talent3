@@ -1,21 +1,25 @@
 ﻿@page
-@model RegisterModel
+@model ExternalLoginModel
 @{
-    ViewData["Title"] = "Register";
-
+    ViewData["Title"] = "Registro";
 
     System.Data.DataTable dt = new System.Data.DataTable();
     dt = Talento.Clases.Estados.DatosEstados();
-
 }
 
-<h2>@ViewData["Title"]</h2>
+<h2>REGISTRO</h2>
+<h4>Se ha asociado tu cuenta de  @Model.LoginProvider.</h4>
+<hr />
+
+<h4 class="text-info">
+    Solo por única vez necesitamos que ingreses los siguientes datos para crear tu cuenta
+    @*Please enter an email address for this site below and click the Register button to finish
+    logging in.*@
+</h4>
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Crear Nueva Cuenta</h4>
-            <hr />
+        <form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Input.Apaterno" class="control-label"></label>
@@ -30,6 +34,7 @@
             <div class="form-group">
                 <label asp-for="Input.Nombre" class="control-label"></label>
                 <input asp-for="Input.Nombre" class="form-control" />
+                <span asp-validation-for="Input.Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.Estado"></label>
@@ -51,12 +56,9 @@
                 </select>
                 <span asp-validation-for="Input.Estado" class="text-danger"></span>
             </div>
-            @*<input asp-for="Input.Estado" class="form-control" />*@
-
-
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
-                <input asp-for="Input.Email" class="form-control"  readonly="readonly"/>
+                <input asp-for="Input.Email" class="form-control" disabled ="disabled" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -69,7 +71,7 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-default">Registrar</button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
     </div>
 </div>
@@ -77,3 +79,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+

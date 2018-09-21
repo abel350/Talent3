@@ -12,7 +12,7 @@ namespace Talento.Clases
     {
         
 
-        public static void InsertaUsuario( string Membresia, string Nombre, string Correo, string Ciudad, string UID )
+        public static void InsertaUsuario( string Membresia, string Nombre, string Correo, string Ciudad, string UID , string Apaterno, string Amaterno)
         {
 
             //SqlConnection cn = new SqlConnection("Server = 192.168.0.100; Database = Bd_Talento; Trusted_Connection = True; MultipleActiveResultSets = true");
@@ -23,8 +23,8 @@ namespace Talento.Clases
 
             SqlCommand consulta = new SqlCommand(string.Format("INSERT INTO [dbo].[Users] ([Membresia],[Apaterno],[Amaterno],[Nombre],[Empresa],[GiroEmpresa],[Puesto],[telefono],[Correo],[Ciudad],[TipoMembresia],[fechaIngreso],[UID]) VALUES (@Membresia, @Apaterno, @Amaterno, @Nombre, @Empresa, @GiroEmpresa, @Puesto, @Telefono, @Correo, @Ciudad, @TipoMemebresia, @FechaIngreso, @UID)"), cn);
             consulta.Parameters.AddWithValue("@Membresia", Membresia);
-            consulta.Parameters.AddWithValue("@Apaterno", "");
-            consulta.Parameters.AddWithValue("@Amaterno", "");
+            consulta.Parameters.AddWithValue("@Apaterno", Apaterno);
+            consulta.Parameters.AddWithValue("@Amaterno", Amaterno);
             consulta.Parameters.AddWithValue("@Nombre", Nombre);
             consulta.Parameters.AddWithValue("@Empresa", "");
             consulta.Parameters.AddWithValue("@GiroEmpresa", "");

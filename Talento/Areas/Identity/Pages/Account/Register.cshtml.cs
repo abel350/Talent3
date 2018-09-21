@@ -45,9 +45,21 @@ namespace Talento.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Debes Ingresar tu Apellido Paterno")]
             [StringLength(50)]
-            [Display(Name = "Nombre de Usuario")]
+            [Display(Name = "Apellido Paterno")]
+            public string Apaterno { get; set; }
+
+
+            [Required(ErrorMessage = "Debes Ingresar tu Apellido Materno")]
+            [StringLength(50)]
+            [Display(Name = "Apellido Materno")]
+            public string Amaterno { get; set; }
+
+
+            [Required(ErrorMessage = "Debes Ingresar tu nombre")]
+            [StringLength(50)]
+            [Display(Name = "Nombre(s)")]
             public string Nombre { get; set; }
 
             [Required]
@@ -98,7 +110,7 @@ namespace Talento.Areas.Identity.Pages.Account
 
                 string membresia = corto + "-" + consformat;
 
-                var user = new IdentityUser { UserName = Input.Nombre, Email = Input.Email };
+                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 { 
@@ -116,8 +128,8 @@ namespace Talento.Areas.Identity.Pages.Account
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     await _userManager.AddToRoleAsync(user, "Silver");
-                    Usuarios.InsertaUsuario(membresia,user.UserName,user.Email,Input.Estado,user.Id);
-                    
+                    Usuarios.InsertaUsuario(membresia, Input.Nombre, user.Email, Input.Estado, user.Id, Input.Apaterno, Input.Amaterno);
+
                     Estados.ActualizarConsecutivo(cons, Input.Estado);
                     
                     return LocalRedirect(returnUrl);
