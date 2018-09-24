@@ -50,7 +50,7 @@
 
 .sidebar .nav-link {
     display: block;
-    padding: 0.75rem 1rem;
+    padding: 0.55rem 1rem;
     color: #fff;
     font-size: .9em;
     text-decoration: none;
@@ -218,7 +218,7 @@ th {
 
 
 #myCarousel {
-    margin-top: 70px;
+    
     min-height: 300px;
     min-width: 100%;
 }
@@ -234,9 +234,8 @@ th {
     background-color: #9d9d9d;
     border: 1px solid black;
     margin-right: 10px;
-    ;
     margin-left: 10px;
-    ;
+    
 }
 
 #myCarousel > .carousel-indicators > .active {
@@ -253,7 +252,7 @@ th {
     /*top: 50%; */
     xtransform: translateY(-50%);
     xbottom: initial;
-    background: rgba(0,0,0,0.5);
+    
     padding: 10px;
     height: 100%;
 }
@@ -262,4 +261,12 @@ th {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+}
+
+.sidebar .sidebar-minimizer {
+    position: relative;
+    -ms-flex: 0 0 50px;
+    flex: 0 0 86px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
 }

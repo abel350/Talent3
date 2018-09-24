@@ -1,27 +1,21 @@
 ﻿@{
-  ViewData["Title"] = "Inicio";
+    ViewData["Title"] = "Inicio";
 }
 
 @section Styles {
-    
+
 }
 <div class="container mt-3">
     <div id="myCarousel" class="carousel slide d-block" data-ride="carousel" data-interval="6000">
-
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="~/images/index.jpg" alt="ASP.NET" class="d-block w-100" />
-                <div class="carousel-caption" role="option">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 text-body">
-                            <h1 class="align-self-center ml-4 mt-5 font-weight-bold">¡Bienvenido@@!</h1>
-                            <H2>@User.Identity.Name</H2>
-                            <img class="logo img-fluid" src="~/images/logo.png" alt="Logo Talento" />
-                        </div>
-                        <div class="col-xs-12 col-md-4">
-                                
-                        </div>
-                        
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <img src="~/images/index.jpg" alt="ASP.NET" class="d-block w-100" />
+                    </div>
+                    <div class="col-md-8">
+                        <img src="~/images/index.jpg" alt="ASP.NET" class="d-block w-100" />
                     </div>
                 </div>
             </div>
