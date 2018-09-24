@@ -215,3 +215,51 @@ th {
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+
+#myCarousel {
+    margin-top: 70px;
+    min-height: 300px;
+    min-width: 100%;
+}
+
+#myCarousel img {
+    min-height: 300px;
+    min-width: 100%;
+}
+
+#myCarousel > .carousel-indicators > li {
+    border-radius: 0px;
+    min-width: 25px;
+    background-color: #9d9d9d;
+    border: 1px solid black;
+    margin-right: 10px;
+    ;
+    margin-left: 10px;
+    ;
+}
+
+#myCarousel > .carousel-indicators > .active {
+    background-color: orange;
+}
+
+#myCarousel .carousel-caption {
+    color: white;
+    xright: 58%;
+    text-align: center;
+    max-width: 300px;
+    left: 0;
+    top: 1px;
+    /*top: 50%; */
+    xtransform: translateY(-50%);
+    xbottom: initial;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    height: 100%;
+}
+
+.item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
