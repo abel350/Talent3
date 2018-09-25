@@ -1,21 +1,52 @@
 ﻿@{
     ViewData["Title"] = "Inicio";
 }
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+@using Talento.Clases
+@using System.Data
 
-@section Styles {
+
+@{
+    DataTable dt = new DataTable();
+
+    if (User.Identity.IsAuthenticated)
+    {
+        var user = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+
+
+        dt = Usuarios.DatosUsuario(user);
+    }
+
 
 }
-<div class="container mt-3">
+
+<div class="container-fluid px-4 mt-3">
     <div id="myCarousel" class="carousel slide d-block" data-ride="carousel" data-interval="6000">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row">
 
                     <div class="col-md-4">
-                        <img src="~/images/index.jpg" alt="ASP.NET" class="d-block w-100" />
+                        <div class="jumbotron bg-white">
+
+                            <h1 class="display-4">¡BIENVENIDO@@!</h1>
+                            
+                            <hr class="my-4">
+                            @{ if (dt.Rows.Count > 0)
+                                {
+
+                                    <H2>  @dt.Rows[0][4]  </H2>
+                                }
+                            }
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Leer más</a>
+                        </div>
+                        
+                        
                     </div>
                     <div class="col-md-8">
-                        <img src="~/images/index.jpg" alt="ASP.NET" class="d-block w-100" />
+                        <img src="~/images/slide.png"     alt="ASP.NET" class="d-block w-100" />
                     </div>
                 </div>
             </div>

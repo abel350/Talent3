@@ -270,3 +270,16 @@ th {
     background-color: rgba(0, 0, 0, 0.2);
     border: 0;
 }
+
+div#myCarousel h1 {
+    font-size: 2.3rem !important;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.font-weight-bold {
+    font-weight: 600 !important;
+}
+
+
+
