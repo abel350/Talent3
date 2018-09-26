@@ -4,51 +4,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    .sidebar .nav-link.active {
-        color: #fff;
-        background: #DE1679;
-    }
-
-    .main .container-fluid {
-        padding: 0;
-    }
-
-    .Titulo {
-        width: 100%;
-        height: auto;
-        background-color: #DE1679;
-        color: white;
-    }
-
-    .info{
-        margin-top:60px;
-        margin-bottom:30px;
-    }
-    .imgprov {
-        
-    }
-    .texto-prov{
-       
-    }
-</style>
 
 
 <div class="row">
-    <div class="Titulo">
-        <h1 style="padding:25px 20px 20px 100px;"><b>DIRECTORIO DE PROVEEDORES</b></h1>
-
+    <div class="title">
+        <h1 class="font-weight-bold">Directorio de Provedores</h1>
     </div>
 </div>
 
-<div class="row info align-items-center">
-    <div class="col-md-5 text-center">
-        <h1 class="b-p4"><b>Talento 2.0</b> apoya a todos<br />los emprendedores <br /> a difundir sus servicios<br /> con los afiliados</h1>
-        <input type="button" class="btn btn-lg btn-primary" name="Info" value="INFORMACIÓN" />
-    </div>
-    <div class="col-md-7">
-        <div class="imgprov">
-            <img src="~/images/DirProv/DirInfo.jpg" alt="Alternate Text" />
+<div class="container-fluid px-4 mt-3">
+    <div class="row info align-items-center">
+        <div class="col-md-5 text-center">
+            <div class="jumbotron bg-light">
+                <h1 class="display-4">Networking Talento 2.0</h1>
+                <p class="lead">
+                    Apoya a todos
+                    los emprendedores
+                    a difundir sus servicios
+                    con los afiliados
+                </p>
+                <hr class="my-4">
+                <h2>30% de descuento</h2>
+                <a class="btn btn-primary btn-lg" href="https://api.whatsapp.com/send?phone=525562546850" target="_blank" role="button">Información</a>
+            </div>                      
+        </div>
+        <div class="col-md-7">
+            <div class="imgprov">
+                <img src="~/images/DirProv/DirInfo.jpg" alt="Alternate Text" />
+            </div>
         </div>
     </div>
+
 </div>

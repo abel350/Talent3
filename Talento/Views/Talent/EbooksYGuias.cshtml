@@ -4,145 +4,90 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    .sidebar .nav-link.active {
-        color: #fff;
-        background: #DE1679;
-    }
 
-    .main .container-fluid {
-        padding: 0;
-    }
-
-    .cuadro-verde {
-        background-color: #92d882;
-    }
-
-    .col-md-4 h5 {
-        background-color: #0094ff;
-        color: #fff;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .img-container {
-        width: auto;
-        height: auto;
-        background:none;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-    }
-
-        .img-container:before {
-            content: '';
-            width: inherit;
-            height: inherit;
-            position: absolute;
-            background: #fff;
-            opacity: 0;
-            transition: opacity .1s ease-out;
-        }
-
-        .img-container:hover:before {
-            opacity: 1;
-        }
-
-         .text-container {
-            
-            color: #444;
-            position: absolute;
-            top: 100%;
-            padding: 0.25rem;
-            background-color: rgba(10, 59, 196, 0.80);
-            border: 1px solid #c8ced3;
-            border-radius: 0.25rem;
-            width: 100%;
-            height: 100%;
-        }
-
-         input {
-             margin-top:50%;
-         }
-
-        .img-container:hover .text-container {
-            top: 0;
-            left: 0;
-        }
-
-</style>
 <div class="row">
-    <div style="width:100%; height:auto; background-color:#DE1679;color: white;">
-        <h1 style="padding:25px 20px 20px 100px;"><b>EbooksYGuias</b></h1>
-
+    <div class="title">
+        <h1 class="font-weight-bold">Ebooks y Guías <i class="fas fa-book"></i></h1>
     </div>
 </div>
-<div class="container">
-    <div class="row text-center" style="margin-top:30px;">
+
+<div id="ebooks-guias" class="container-fluid px-4 mt-3">
+    <div class="row justify-content-center mt-3">
         <div class="col-md-12">
             <div class="row ">
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
-                        <img class="" src="~/images/Ebooks-guias/Recurso 14-100.jpg" alt="CURSOS VIRTUALES" />
-                        <div class="text-container">
-                            <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
+                    <div class="hovereffect">
+                        <img class="img-fluid" src="~/images/Ebooks-guias/Recurso 14-100.jpg" alt="CURSOS VIRTUALES" />
+                        <div class="overlay">
+                            <h2>Gestión de Talento Humano</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="hovereffect">
                         <img class="" src="~/images/Ebooks-guias/Recurso 16-100.jpg" alt="CURSOS VIRTUALES" />
-                        <div class="text-container">
-                            <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
+                        <div class="overlay">
+                            <h2>Reclutamiento 3.0</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
-                <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                <div class="col-md-3">                    
+                    <div class="hovereffect">
                         <img class="" src="~/images/Ebooks-guias/Recurso 17-100.jpg" alt="CURSOS VIRTUALES" />
-                        <div class="text-container">
-                            <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
+                        <div class="overlay">
+                            <h2>Fidelización de Talento</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="hovereffect">
                         <img class="" src="~/images/Ebooks-guias/Recurso 18-100.jpg" alt="CURSOS VIRTUALES" />
-                        <div class="text-container">
-                            <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
+                        <div class="overlay">
+                            <h2>Atracción de personal 3.0</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
             <div class="row" style="margin-top:50px;">
-                <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                <div class="col-md-3">                    
+                    <div class="hovereffect">
                         <img class="" src="~/images/Ebooks-guias/Recurso 19-100.jpg" alt="CURSOS VIRTUALES" />
-                        <div class="text-container">
-                            <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
+                        <div class="overlay">
+                            <h2>Como elegir las fuentes de Reclutamiento</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
                         </div>
                     </div>
-                </div><div class="col-md-3">
-                <div class="img-thumbnail img-container">
-                    <img class="" src="~/images/Ebooks-guias/Recurso 20-100.jpg" alt="CURSOS VIRTUALES" />
-                    <div class="text-container">
-                        <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
-                    </div>
                 </div>
-                 </div><div class="col-md-3">
-                <div class="img-thumbnail img-container">
-                    <img class="" src="~/images/Ebooks-guias/Recurso 21-100.jpg" alt="CURSOS VIRTUALES" />
-                    <div class="text-container">
-                        <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
-                    </div>
+                <div class="col-md-3">
+                    <div class="hovereffect">
+                        <img class="" src="~/images/Ebooks-guias/Recurso 20-100.jpg" alt="CURSOS VIRTUALES" />
+                        <div class="overlay">
+                            <h2>Cursos por competencia</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>                   
                 </div>
-                 </div><div class="col-md-3">
-                <div class="img-thumbnail img-container">
-                    <img class="" src="~/images/Ebooks-guias/Recurso 22-100.jpg" alt="CURSOS VIRTUALES" />
-                    <div class="text-container">
-                        <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
-                    </div>
+                <div class="col-md-3">
+                    <div class="hovereffect">
+                        <img class="" src="~/images/Ebooks-guias/Recurso 21-100.jpg" alt="CURSOS VIRTUALES" />
+                        <div class="overlay">
+                            <h2>Como hacer vacantes más atratactivas</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>                    
                 </div>
+                <div class="col-md-3">
+                    <div class="hovereffect">
+                        <img class="" src="~/images/Ebooks-guias/Recurso 22-100.jpg" alt="CURSOS VIRTUALES" />
+                        <div class="overlay">
+                            <h2>Herramientas para diseñar vacantes atractivas</h2>
+                            <a class="btn btn-ghost-dark btn-lg" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>                    
                 </div>
 
             </div>
@@ -150,7 +95,7 @@
 
             <div class="row" style="margin-top:50px;">
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 23-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -158,7 +103,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 24-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -166,7 +111,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 25-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -174,7 +119,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 27-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -186,7 +131,7 @@
 
             <div class="row" style="margin-top:50px;">
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 28-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -194,7 +139,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 29-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -202,7 +147,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 30-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -210,7 +155,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 31-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -222,7 +167,7 @@
 
             <div class="row" style="margin-top:50px;">
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 32-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -231,7 +176,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 33-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -239,7 +184,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 34-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -247,7 +192,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 35-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -259,7 +204,7 @@
 
             <div class="row" style="margin-top:50px;">
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 36-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -267,7 +212,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 37-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />
@@ -275,7 +220,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="img-thumbnail img-container">
+                    <div class="img-fluid  img-container">
                         <img class="" src="~/images/Ebooks-guias/Recurso 38-100.jpg" alt="CURSOS VIRTUALES" />
                         <div class="text-container">
                             <input class="btn btn-dark " type="button" name="Comprar" value="Comprar" />

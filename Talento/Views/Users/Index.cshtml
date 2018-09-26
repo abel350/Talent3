@@ -5,133 +5,116 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    .sidebar .nav-link.active {
-        color: #fff;
-        background: #DE1679;
-    }
-    th {
-        font-size: medium;
-    }
-
-    td a {
-        color: black;
-    }
-
-        td a:hover {
-            font-weight: bold;
-            color: black;
-        }
-
-        table {
-            margin-top:50px;
-        }
-    .Titulo {
-        width: 100%;
-        height: auto;
-        background-color: #DE1679;
-        color: white;
-    }
-</style>
-
 <div class="row">
-    <div class="Titulo">
-        <h1 style="padding:25px 20px 20px 100px;"><b>Usuarios</b></h1>
-
+    <div class="title">
+        <h1 class="font-weight-bold">Dashborad -  <span class="text-white">Registro de Afiliados</span></h1>
     </div>
 </div>
 
 @*<p>
         <a asp-action="Create">Create New</a>
     </p>*@
-<table class="table table-responsive-sm table-hover table-outline mb-0 table-success">
-    <thead class="table-info">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Membresia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Apaterno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Amaterno)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Empresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GiroEmpresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Puesto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefono)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Correo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ciudad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoMembresia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaIngreso)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="container-fluid px-4 mt-3 table-responsive mt-4">
+
+    <table class="table table-outline mb-0 bg-white">
+
+        <thead class="">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Membresia)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Apaterno)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Amaterno)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Empresa)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GiroEmpresa)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Puesto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefono)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Correo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Ciudad)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TipoMembresia)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FechaIngreso)
-                </td>
-                <td>
-                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a> |
-                    @*<a asp-action="Details" asp-route-id="@item.Id_Usuario">Details</a> |*@
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash"></i></a>
-                </td>
+                <th>
+                    <!--Html.DisplayNameFor(model => model.Membresia)-->
+                    Membresía
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.Apaterno)-->
+                    Apellido Paterno
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.Amaterno)-->
+                    Apellido Materno
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.Nombre)-->
+                    Nombre
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.Empresa)-->
+                    Empresa
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.GiroEmpresa)-->
+                    Giro de Empresa
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.Puesto)-->
+                    Puesto
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.Correo)-->
+                    Correo electrónico
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ciudad)
+                </th>
+                <th>
+                    <!--@Html.DisplayNameFor(model => model.TipoMembresia)-->
+                    Rol
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaIngreso)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Membresia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apaterno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amaterno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Empresa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GiroEmpresa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Puesto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Correo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ciudad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoMembresia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaIngreso)
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a> |
+                        @*<a asp-action="Details" asp-route-id="@item.Id_Usuario">Details</a> |*@
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id_Usuario" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

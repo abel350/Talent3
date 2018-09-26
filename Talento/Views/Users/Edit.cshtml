@@ -17,112 +17,100 @@
 
 }
 
-<style>
-    .sidebar .nav-link.active {
-        color: #fff;
-        background: #DE1679;
-    }
-    .Titulo {
-        width: 100%;
-        height: auto;
-        background-color: #DE1679;
-        color: white;
-    }
-</style>
 <div class="row">
-    <div class="Titulo">
-        <h1 style="padding:25px 20px 20px 100px;"><b>Modificar Usuario</b></h1>
-
+    <div class="title">
+        <h1 class="font-weight-bold">Modificar Usuario</h1>
     </div>
 </div>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id_Usuario" />
-            <div class="form-group">
-                <label asp-for="Membresia" class="control-label"></label>
-                <input asp-for="Membresia" class="form-control" />
-                <span asp-validation-for="Membresia" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Apaterno" class="control-label"></label>
-                <input asp-for="Apaterno" class="form-control" />
-                <span asp-validation-for="Apaterno" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Amaterno" class="control-label"></label>
-                <input asp-for="Amaterno" class="form-control" />
-                <span asp-validation-for="Amaterno" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Empresa" class="control-label"></label>
-                <input asp-for="Empresa" class="form-control" />
-                <span asp-validation-for="Empresa" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GiroEmpresa" class="control-label"></label>
-                <input asp-for="GiroEmpresa" class="form-control" />
-                <span asp-validation-for="GiroEmpresa" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Puesto" class="control-label"></label>
-                <input asp-for="Puesto" class="form-control" />
-                <span asp-validation-for="Puesto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
-                <span asp-validation-for="Telefono" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" class="form-control" />
-                <span asp-validation-for="Correo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ciudad" class="control-label"></label>
-                <input asp-for="Ciudad" class="form-control" />
-                <span asp-validation-for="Ciudad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TipoMembresia" class="control-label"></label>
-                <select asp-for="TipoMembresia" id="inputState" title="Tipo de Memebresía" class="form-control">
-                    <option selected>Silver</option>
-                    <option>Gold</option>
-                    <option>Consultor</option>
-                    <option>Alfa</option>
-                    <option>Admin</option>
-                </select>
-            </div>
-            @*<div class="form-group">
+<div class="container-fluid px-4 mt-3">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id_Usuario" />
+                <div class="form-group">
+                    <label asp-for="Membresia" class="control-label"></label>
+                    <input asp-for="Membresia" class="form-control" />
+                    <span asp-validation-for="Membresia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Apaterno" class="control-label"></label>
+                    <input asp-for="Apaterno" class="form-control" />
+                    <span asp-validation-for="Apaterno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Amaterno" class="control-label"></label>
+                    <input asp-for="Amaterno" class="form-control" />
+                    <span asp-validation-for="Amaterno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Empresa" class="control-label"></label>
+                    <input asp-for="Empresa" class="form-control" />
+                    <span asp-validation-for="Empresa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GiroEmpresa" class="control-label"></label>
+                    <input asp-for="GiroEmpresa" class="form-control" />
+                    <span asp-validation-for="GiroEmpresa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Puesto" class="control-label"></label>
+                    <input asp-for="Puesto" class="form-control" />
+                    <span asp-validation-for="Puesto" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telefono" class="control-label"></label>
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Correo" class="control-label"></label>
+                    <input asp-for="Correo" class="form-control" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ciudad" class="control-label"></label>
+                    <input asp-for="Ciudad" class="form-control" />
+                    <span asp-validation-for="Ciudad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label asp-for="TipoMembresia" class="control-label"></label>
-                    <input asp-for="TipoMembresia" class="form-control" />
-                    <span asp-validation-for="TipoMembresia" class="text-danger"></span>
-                </div>*@
-            <div class="form-group">
-                <label asp-for="FechaIngreso" class="control-label"></label>
-                <input asp-for="FechaIngreso" class="form-control" />
-                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-lg btn-primary" />
-            </div>
-        </form>
+                    <select asp-for="TipoMembresia" id="inputState" title="Tipo de Memebresía" class="form-control">
+                        <option selected>Silver</option>
+                        <option>Gold</option>
+                        <option>Consultor</option>
+                        <option>Alfa</option>
+                        <option>Admin</option>
+                    </select>
+                </div>
+                @*<div class="form-group">
+                        <label asp-for="TipoMembresia" class="control-label"></label>
+                        <input asp-for="TipoMembresia" class="form-control" />
+                        <span asp-validation-for="TipoMembresia" class="text-danger"></span>
+                    </div>*@
+                <div class="form-group">
+                    <label asp-for="FechaIngreso" class="control-label"></label>
+                    <input asp-for="FechaIngreso" class="form-control" />
+                    <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-lg btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
+
+    <div>
+        <a class="btn btn-lg btn-outline-primary" asp-action="Index">Volver a la lista de usuarios</a>
+    </div>    
 </div>
 
-<div>
-    <a class="btn btn-lg btn-outline-primary" asp-action="Index">Volver a la lista de usuarios</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
