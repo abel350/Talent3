@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Login";
 }
 
 <!DOCTYPE html>
@@ -22,11 +22,11 @@
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="~/lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!-- Main styles for this application-->
-    <link href="~/css/style.css" rel="stylesheet">
+    
     <link href="~/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
 </head>
 <body class="app flex-row align-items-center">
-    <div class="container">
+    <div class="container-fluid px-4 mt-3">
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card-group">
@@ -97,7 +97,7 @@
                         <div class="card-group">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3>Inicia con tu Red Social preferida</h3>
+                                        <h3>Inicia con tu red social preferida</h3>
                                         <hr />
                                         @{
                                             if ((Model.ExternalLogins?.Count ?? 0) == 0)
