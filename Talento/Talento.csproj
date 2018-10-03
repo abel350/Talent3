@@ -15,6 +15,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Talent\Consultores.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Talent\Recomiendanos.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Talent\Encuestas.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Talent\Mensajes-masivos.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

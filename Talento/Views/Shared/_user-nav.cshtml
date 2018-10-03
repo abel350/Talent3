@@ -17,10 +17,10 @@
 }
 
 <li class="nav-item dropdown">
-    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-item nav-link " b data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
         @*<img class="img-avatar" src="~/images/avatars/6.jpg" alt="">*@
         @* @User.Identity.Name *@
-        @dt.Rows[0][4]   |   @dt.Rows[0][1]
+        <i class="far fa-user"></i> Hola, @dt.Rows[0][4]   |   @dt.Rows[0][1] <i class="fas fa-sort-down"></i>
     </a>
     <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header text-center">
